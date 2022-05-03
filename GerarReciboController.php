@@ -26,18 +26,18 @@
     <?php
         function gerarRecibo() {
             $valorSalario = $_POST["valorRecebido"];
-            // $empregado = document.getElementById("empregado").value;
-            // $aTituloDe = document.getElementById("aTituloDe").value;
-            // $remuneracaoMes = document.getElementById("remuneracaoMes").value;
-            // $empregador = document.getElementById("empregador").value;
-            // $cpfCnpj = document.getElementById("cpf").value;
-            // $cidade = document.getElementById("cidade").value;
-            // $data = document.getElementById("data").value;
-            // $chavePix = document.getElementById("chavePix").value;
-            // $conta = document.getElementById("conta").value;
-            // $agencia = document.getElementById("agencia").value;
-            // $duasVias = document.getElementById("vias");
-            // $mes = verificaMes(data);
+            $empregado = $_POST["empregado"];
+            $aTituloDe = $_POST["aTituloDe"];
+            $remuneracaoMes = $_POST["remuneracaoMes"];
+            $empregador = $_POST["empregador"];
+            $cpfCnpj = $_POST["cpf"];
+            $cidade = $_POST["cidade"];
+            $data = $_POST["data"];
+            $chavePix = $_POST["chavePix"];
+            $conta = $_POST["conta"];
+            $agencia = $_POST["agencia"];
+            $duasVias = $_POST["vias"];
+            $mes = verificaMes(data);
         }
     ?>
 
