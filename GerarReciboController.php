@@ -67,15 +67,38 @@
                 </div>
 
                 <p id="paragrafoNome">
-                    teste de paragrafo dentro da
+                    Eu, <?php echo $empregado ?>
                 </p>
-                <p id="paragrafoTitulo"></p>
-                <p id="paragrafoValor" style="border: #000000 solid 1px;"></p>
-                <p id="paragrafoTexto"></p>
-                <p id="paragrafoChavePix"></p>
-                <p id="paragrafoCidadeData" style="text-align: right;"></p>
+                <p id="paragrafoTitulo"> 
+                    Declaro para todos os efeitos, ter recebido a título de <?php echo $aTituloDe ?> a importância de:
+                </p>
+                <p id="paragrafoValor" style="border: #000000 solid 1px;">
+                    <?php
+                        ($valorSalario.strval() == '1' ? strtoupper($valorSalario.strval().extenso() + " real") : strtoupper($valorSalario.strval().extenso() + " reais"))
+                    ?>
+                </p>
+                <p id="paragrafoTexto">
+                    e em concordância com o disposto no Art. 462, da CLT, tenho plena consciência de que o respectivo 
+                    valor será descontado, pelo empregador: <?php echo $empregador ?>, CNPJ: <?php echo $cpfCnpj ?>, do pagamento da minha remuneração mensal relativa à folha do mês de 
+                    <?php echo $remuneracaoMes ?> e incidindo na base de cálculo de encargos sociais e fiscais para todos os efeitos legais.";
+                </p>
+                <p id="paragrafoChavePix">
+                    <?php if($chavePix != null && $chavePix != ) {
+                        echo "Pagamento realizado pelo Pix: " . $chavePix;
+                    }
+                    if ($conta != null && $conta != "" && $agencia != null && $agencia != "") {
+                        echo "Pagamento realizado na conta: " . $conta . ", agência: " . $agencia;
+                    } ?>
+                </p>
+                <p id="paragrafoCidadeData" style="text-align: right;">
+                    <?php 
+                        $cidade . ", " . $data[8] . $data[9] . " de " . $mes + " de " . $data[0] . $data[1] . $data[2] . $data[3];
+                    ?>
+                </p>
                 <br /><br />
-                <span id="assinatura" style="border-top: 1px solid #999; margin: auto; display: block; width: 30%; text-align: center;"></span>
+                <span id="assinatura" style="border-top: 1px solid #999; margin: auto; display: block; width: 30%; text-align: center;">
+                    <?php echo $empregado ?>
+                </span>
             </div>
             <br />
 
@@ -89,14 +112,38 @@
                     <div id="valorSalario2" style="border: solid 1px #000000; margin: 10px; justify-content: flex-end;"></div>
                 </div>
 
-                <p id="paragrafoNome2"></p>
-                <p id="paragrafoTitulo2"></p>
-                <p id="paragrafoValor2" style="border: #000000 solid 1px;"></p>
-                <p id="paragrafoTexto2"></p>
-                <p id="paragrafoChavePix2"></p>
-                <p id="paragrafoCidadeData2" style="text-align: right;"></p>
+                <p id="paragrafoNome2">
+                    Eu, <?php echo $empregado ?></p>
+                <p id="paragrafoTitulo2">
+                    Declaro para todos os efeitos, ter recebido a título de <?php echo $aTituloDe ?> a importância de:
+                </p>
+                <p id="paragrafoValor2" style="border: #000000 solid 1px;">
+                    <?php
+                        ($valorSalario.strval() == '1' ? strtoupper($valorSalario.strval().extenso() + " real") : strtoupper($valorSalario.strval().extenso() + " reais"))
+                    ?>
+                </p>
+                <p id="paragrafoTexto2">
+                    e em concordância com o disposto no Art. 462, da CLT, tenho plena consciência de que o respectivo 
+                    valor será descontado, pelo empregador: <?php echo $empregador ?>, CNPJ: <?php echo $cpfCnpj ?>, do pagamento da minha remuneração mensal relativa à folha do mês de 
+                    <?php echo $remuneracaoMes ?> e incidindo na base de cálculo de encargos sociais e fiscais para todos os efeitos legais.";
+                </p>
+                <p id="paragrafoChavePix2">
+                    <?php if($chavePix != null && $chavePix != ) {
+                        echo "Pagamento realizado pelo Pix: " . $chavePix;
+                    }
+                    if ($conta != null && $conta != "" && $agencia != null && $agencia != "") {
+                        echo "Pagamento realizado na conta: " . $conta . ", agência: " . $agencia;
+                    } ?>
+                </p>
+                <p id="paragrafoCidadeData2" style="text-align: right;">
+                    <?php 
+                        echo $cidade . ", " . $data[8] . $data[9] . " de " . $mes + " de " . $data[0] . $data[1] . $data[2] . $data[3];
+                    ?>
+                </p>
                 <br /><br />
-                <span id="assinatura2" style="border-top: 1px solid #999; margin: auto; display: block; width: 30%; text-align: center;"></span>
+                <span id="assinatura2" style="border-top: 1px solid #999; margin: auto; display: block; width: 30%; text-align: center;">
+                    <?php echo $empregado ?>
+                </span>
             </div>
             <br />
         </div>
