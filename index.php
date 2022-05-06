@@ -120,7 +120,7 @@
                 <input id="vias" type="checkbox" />
                 <br /><br />
             
-                <button action="GerarReciboController.php" method="post" type="submit"
+                <button type="submit"
                     style="background-color: #3273dc; border: 1px solid transparent; border-radius: 8px;">
                     <div class="row" style="margin: 2px;">
                         <div style="background-color: #ffffff; padding: 1px;">

@@ -24,21 +24,21 @@
 <body>
 
     <?php
-        function gerarRecibo() {
-            $valorSalario = $_POST["valorRecebido"];
-            $empregado = $_POST["empregado"];
-            $aTituloDe = $_POST["aTituloDe"];
-            $remuneracaoMes = $_POST["remuneracaoMes"];
-            $empregador = $_POST["empregador"];
-            $cpfCnpj = $_POST["cpf"];
-            $cidade = $_POST["cidade"];
-            $data = $_POST["data"];
-            $chavePix = $_POST["chavePix"];
-            $conta = $_POST["conta"];
-            $agencia = $_POST["agencia"];
-            $duasVias = $_POST["vias"];
-            $mes = verificaMes(data);
-        }
+
+        $valorSalario = $_POST["valorRecebido"];
+        $empregado = $_POST["empregado"];
+        $aTituloDe = $_POST["aTituloDe"];
+        $remuneracaoMes = $_POST["remuneracaoMes"];
+        $empregador = $_POST["empregador"];
+        $cpfCnpj = $_POST["cpf"];
+        $cidade = $_POST["cidade"];
+        $data = $_POST["data"];
+        $chavePix = $_POST["chavePix"];
+        $conta = $_POST["conta"];
+        $agencia = $_POST["agencia"];
+        $duasVias = $_POST["vias"];
+        $mes = "Maio";
+        
     ?>
 
 
@@ -67,23 +67,25 @@
                 </div>
 
                 <p id="paragrafoNome">
-                    Eu, <?php echo $empregado ?>
+                    
+                    Eu, <?php $empregado = $_POST["empregado"]; echo $empregado; ?>
                 </p>
                 <p id="paragrafoTitulo"> 
                     Declaro para todos os efeitos, ter recebido a título de <?php echo $aTituloDe ?> a importância de:
                 </p>
                 <p id="paragrafoValor" style="border: #000000 solid 1px;">
                     <?php
-                        ($valorSalario.strval() == '1' ? strtoupper($valorSalario.strval().extenso() + " real") : strtoupper($valorSalario.strval().extenso() + " reais"))
+                        $valorSalario = $_POST["valorRecebido"];
+                        ($valorSalario.strval() == '1' ? strtoupper($valorSalario.strval().extenso() + " real") : strtoupper($valorSalario.strval().extenso() + " reais"));
                     ?>
                 </p>
                 <p id="paragrafoTexto">
                     e em concordância com o disposto no Art. 462, da CLT, tenho plena consciência de que o respectivo 
-                    valor será descontado, pelo empregador: <?php echo $empregador ?>, CNPJ: <?php echo $cpfCnpj ?>, do pagamento da minha remuneração mensal relativa à folha do mês de 
-                    <?php echo $remuneracaoMes ?> e incidindo na base de cálculo de encargos sociais e fiscais para todos os efeitos legais.";
+                    valor será descontado, pelo empregador: <?php $empregado = $_POST["empregado"]; echo $empregador; ?>, CNPJ: <?php echo $cpfCnpj; ?>, do pagamento da minha remuneração mensal relativa à folha do mês de 
+                    <?php echo $remuneracaoMes; ?> e incidindo na base de cálculo de encargos sociais e fiscais para todos os efeitos legais.";
                 </p>
                 <p id="paragrafoChavePix">
-                    <?php if($chavePix != null && $chavePix != ) {
+                    <?php if($chavePix != null && $chavePix != "") {
                         echo "Pagamento realizado pelo Pix: " . $chavePix;
                     }
                     if ($conta != null && $conta != "" && $agencia != null && $agencia != "") {
@@ -97,7 +99,7 @@
                 </p>
                 <br /><br />
                 <span id="assinatura" style="border-top: 1px solid #999; margin: auto; display: block; width: 30%; text-align: center;">
-                    <?php echo $empregado ?>
+                    <?php echo $empregado; ?>
                 </span>
             </div>
             <br />
@@ -113,22 +115,23 @@
                 </div>
 
                 <p id="paragrafoNome2">
-                    Eu, <?php echo $empregado ?></p>
+                    Eu, <?php echo $empregado; ?></p>
                 <p id="paragrafoTitulo2">
-                    Declaro para todos os efeitos, ter recebido a título de <?php echo $aTituloDe ?> a importância de:
+                    Declaro para todos os efeitos, ter recebido a título de <?php echo $aTituloDe; ?> a importância de:
                 </p>
                 <p id="paragrafoValor2" style="border: #000000 solid 1px;">
                     <?php
-                        ($valorSalario.strval() == '1' ? strtoupper($valorSalario.strval().extenso() + " real") : strtoupper($valorSalario.strval().extenso() + " reais"))
+                        $valorSalario = $_POST["valorRecebido"];
+                        ($valorSalario.strval() == '1' ? strtoupper($valorSalario.strval().extenso() + " real") : strtoupper($valorSalario.strval().extenso() + " reais"));
                     ?>
                 </p>
                 <p id="paragrafoTexto2">
                     e em concordância com o disposto no Art. 462, da CLT, tenho plena consciência de que o respectivo 
-                    valor será descontado, pelo empregador: <?php echo $empregador ?>, CNPJ: <?php echo $cpfCnpj ?>, do pagamento da minha remuneração mensal relativa à folha do mês de 
-                    <?php echo $remuneracaoMes ?> e incidindo na base de cálculo de encargos sociais e fiscais para todos os efeitos legais.";
+                    valor será descontado, pelo empregador: <?php echo $empregador; ?>, CNPJ: <?php echo $cpfCnpj; ?>, do pagamento da minha remuneração mensal relativa à folha do mês de 
+                    <?php echo $remuneracaoMes; ?> e incidindo na base de cálculo de encargos sociais e fiscais para todos os efeitos legais.";
                 </p>
                 <p id="paragrafoChavePix2">
-                    <?php if($chavePix != null && $chavePix != ) {
+                    <?php if($chavePix != null && $chavePix != "") {
                         echo "Pagamento realizado pelo Pix: " . $chavePix;
                     }
                     if ($conta != null && $conta != "" && $agencia != null && $agencia != "") {
@@ -142,7 +145,7 @@
                 </p>
                 <br /><br />
                 <span id="assinatura2" style="border-top: 1px solid #999; margin: auto; display: block; width: 30%; text-align: center;">
-                    <?php echo $empregado ?>
+                    <?php echo $empregado; ?>
                 </span>
             </div>
             <br />
