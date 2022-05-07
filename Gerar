@@ -1,0 +1,79 @@
+<?php
+    $valorSalario = $_POST["valorSalario"];
+    $paragrafoNome = $_POST["paragrafoNome"];
+    $paragrafoTitulo = $_POST["paragrafoTitulo"];
+    $paragrafoValor = $_POST["paragrafoValor"];
+    $paragrafoTexto = $_POST["paragrafoTexto"];
+    $paragrafoCidadeData = $_POST["paragrafoCidadeData"];
+
+    echo "<div id=\"reciboSalario\" style=\"border: 2px solid #000000; padding: 20px;
+                        border-radius: 8px;\">
+                    <h3 style=\"text-align: center;\">
+                        Recibo de Salário
+                    </h3>
+                    <div class=\"row\">
+                        <div style=\"flex: 80%;\"></div>
+                        <div id=\"valorSalario\" style=\"border: solid 1px #000000; margin: 10px; justify-content: flex-end;\">
+                            {$valorSalario}
+                        </div>
+                    </div>
+
+                    <p id=\"paragrafoNome\">
+                        $paragrafoNome
+                    </p>
+                    <p id=\"paragrafoTitulo\">
+                        $paragrafoTitulo
+                    </p>
+                    <p id=\"paragrafoValor\" style=\"border: #000000 solid 1px;\">
+                        $paragrafoValor
+                    </p>
+                    <p id=\"paragrafoTexto\">
+                        $paragrafoTexto
+                    </p>
+                    <p id=\"paragrafoChavePix\">
+                        
+                    </p>
+                    <p id=\"paragrafoCidadeData\" style=\"text-align: right;\">
+                        $paragrafoCidadeData
+                    </p>
+                    <br /><br />
+                    <span id=\"assinatura\" style=\"border-top: 1px solid #999; margin: auto; display: block; width: 30%; text-align: center;\">
+                        
+                    </span>
+                </div>";
+    echo "
+        <div id=\"reciboSalario2\" style=\"border: 2px solid #000000; padding: 20px;
+                            border-radius: 8px; display: none;\">
+                    <h3 style=\"text-align: center;\">
+                        Recibo de Salário
+                    </h3>
+                    <div class=\"row\">
+                        <div style=\"flex: 80%;\"></div>
+                        <div id=\"valorSalario2\" style=\"border: solid 1px #000000; margin: 10px; justify-content: flex-end;\"></div>
+                    </div>
+
+                    <p id=\"paragrafoNome2\">
+                        
+                    <p id=\"paragrafoTitulo2\">
+                        
+                    </p>
+                    <p id=\"paragrafoValor2\" style=\"border: #000000 solid 1px;\">
+                        
+                    </p>
+                    <p id=\"paragrafoTexto2\">
+                        
+                    </p>
+                    <p id=\"paragrafoChavePix2\">
+                        
+                    </p>
+                    <p id=\"paragrafoCidadeData2\" style=\"text-align: right;\">
+                        
+                    </p>
+                    <br /><br />
+                    <span id=\"assinatura2\" style=\"border-top: 1px solid #999; margin: auto; display: block; width: 30%; text-align: center;\">
+                        
+                    </span>
+                </div>
+    ";
+?>
+<!--  -->
